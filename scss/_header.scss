@@ -1,0 +1,37 @@
+@use 'variables' as v;
+header {
+  background-color: v.$body-color;
+  // min-height: 600px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  //   padding: 2rem;
+  .logo {
+    color: v.$font-heading-color;
+    font-family: v.$ff-headings;
+    font-weight: 300;
+    font-size: 1.4rem;
+  }
+}
+.title {
+  color: v.$font-heading-color;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+.paragraph {
+  color: v.$font-body-color;
+  font-family: v.$ff-body;
+  line-height: 1.5;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+}
+.images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 4rem;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Developer_Portfolio",
+  "version": "1.0.0",
+  "description": "Codewell's aim is to provide you with real-world design templates that you can use to practice your HTML and CSS projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss:css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.54.3"
+  }
+}

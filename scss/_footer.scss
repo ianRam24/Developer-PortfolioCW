@@ -1,0 +1,26 @@
+@use 'variables' as v;
+.footer {
+  background-color: v.$community-bg;
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    color: v.$font-heading-color;
+    font-family: v.$ff-headings;
+    font-weight: 300;
+    font-size: 1.4rem;
+  }
+}
+.social {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  li {
+    list-style: none;
+  }
+}
+.footer-icon {
+  width: 1.5rem;
+}

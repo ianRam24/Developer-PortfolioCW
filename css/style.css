@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Prata&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 1rem;
+}
+
+body {
+  background-color: #000;
+}
+
+header {
+  background-color: #000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.nav .logo {
+  color: white;
+  font-family: "Prata", serif;
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+.paragraph {
+  color: #808081;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 4rem;
+}
+
+main {
+  margin: 2rem 0;
+  background-color: #000;
+}
+
+.works__image {
+  width: 100%;
+  height: 350px;
+  margin: 2rem 0;
+}
+.works__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.works .paragraph {
+  font-size: 0.95rem;
+}
+.works .paragraph span {
+  font-style: italic;
+}
+
+.community {
+  background-color: #2e3038;
+}
+
+.contact {
+  margin: 2rem 0;
+}
+.contact .button {
+  background-color: #fbe850;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-family: "Prata", serif;
+  font-size: 1rem;
+}
+
+.footer {
+  background-color: #2e3038;
+}
+.footer .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .logo {
+  color: white;
+  font-family: "Prata", serif;
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.social li {
+  list-style: none;
+}
+
+.footer-icon {
+  width: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
