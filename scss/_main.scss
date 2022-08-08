@@ -1,11 +1,10 @@
 @use 'variables' as v;
 main {
   margin: 2rem 0;
-
   background-color: v.$body-color;
 }
-.works {
-  &__image {
+.grid {
+  .work__image {
     width: 100%;
     height: 350px;
     margin: 2rem 0;
@@ -15,6 +14,7 @@ main {
       object-fit: cover;
     }
   }
+
   .paragraph {
     font-size: 0.95rem;
     span {
@@ -22,17 +22,58 @@ main {
     }
   }
 }
+.title {
+  font-size: 3rem;
+  color: v.$font-heading-color;
+  font-weight: 100;
+}
+
 .community {
   background-color: v.$community-bg;
 }
+.button {
+  background-color: v.$btn-color;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-family: v.$ff-headings;
+  font-size: 1rem;
+  transition: 0.5s ease-out background-color;
+  &:hover {
+    background-color: darken(v.$btn-color, 35%);
+  }
+}
+
 .contact {
   margin: 2rem 0;
-  .button {
-    background-color: v.$btn-color;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    font-family: v.$ff-headings;
-    font-size: 1rem;
+}
+@media (min-width: v.$desktop) {
+  .grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    .work {
+      &__image {
+        width: 80%;
+        height: 400px;
+
+        img {
+          width: 100%;
+        }
+      }
+      .paragraph {
+        width: 30rem;
+      }
+    }
+  }
+  .text-container {
+    min-height: 400px;
+    .title {
+      width: 600px;
+    }
+    .paragraph {
+      width: 500px;
+    }
   }
 }

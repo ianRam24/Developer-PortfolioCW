@@ -1,12 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Prata&display=swap");
+/* Media Quieries */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 body {
@@ -29,8 +36,20 @@ header {
   font-weight: 300;
   font-size: 1.4rem;
 }
+.nav__links {
+  display: none;
+}
+.nav .button {
+  display: none;
+  background-color: #fbe850;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-family: "Prata", serif;
+  font-size: 1rem;
+}
 
-.title {
+h1 {
   color: white;
   font-weight: 300;
   font-size: 2.5rem;
@@ -52,44 +71,136 @@ header {
   gap: 1rem 4rem;
 }
 
+@media (min-width: 992px) {
+  .nav__menu {
+    display: none;
+  }
+  .nav .button {
+    display: block;
+  }
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .nav__links li {
+    position: relative;
+    transition: cubic-bezier(0.77, 0, 0.18, 1) 0.5s;
+  }
+  .nav__links li::after {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    left: 50%;
+    height: 2px;
+    background: #fbe850;
+    transition: cubic-bezier(0.77, 0, 0.18, 1) 0.5s;
+  }
+  .nav__links li:hover::after {
+    width: 80%;
+    left: 10%;
+  }
+  .nav__links a {
+    text-decoration: none;
+    color: #808081;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-family: "Inter", sans-serif;
+    transition: 0.5s ease-in-out color;
+  }
+  .nav__links a:hover {
+    color: white;
+  }
+  h1 {
+    font-size: 4rem;
+    width: 50rem;
+    margin-top: 3rem;
+  }
+  .paragraph {
+    width: 40rem;
+  }
+  .images-container {
+    margin-top: 2rem;
+    align-items: center;
+  }
+}
 main {
   margin: 2rem 0;
   background-color: #000;
 }
 
-.works__image {
+.grid .work__image {
   width: 100%;
   height: 350px;
   margin: 2rem 0;
 }
-.works__image img {
+.grid .work__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.works .paragraph {
+.grid .paragraph {
   font-size: 0.95rem;
 }
-.works .paragraph span {
+.grid .paragraph span {
   font-style: italic;
+}
+
+.title {
+  font-size: 3rem;
+  color: white;
+  font-weight: 100;
 }
 
 .community {
   background-color: #2e3038;
 }
 
-.contact {
-  margin: 2rem 0;
-}
-.contact .button {
+.button {
   background-color: #fbe850;
   border: none;
   border-radius: 0.5rem;
   padding: 1rem;
   font-family: "Prata", serif;
   font-size: 1rem;
+  transition: 0.5s ease-out background-color;
+}
+.button:hover {
+  background-color: #958503;
 }
 
+.contact {
+  margin: 2rem 0;
+}
+
+@media (min-width: 992px) {
+  .grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  .grid .work__image {
+    width: 80%;
+    height: 400px;
+  }
+  .grid .work__image img {
+    width: 100%;
+  }
+  .grid .work .paragraph {
+    width: 30rem;
+  }
+  .text-container {
+    min-height: 400px;
+  }
+  .text-container .title {
+    width: 600px;
+  }
+  .text-container .paragraph {
+    width: 500px;
+  }
+}
 .footer {
   background-color: #2e3038;
 }
@@ -116,6 +227,16 @@ main {
 
 .footer-icon {
   width: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .footer .footer-icon {
+    width: 2rem;
+    color: #000;
+  }
+  .footer .logo {
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

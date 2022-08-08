@@ -15,8 +15,20 @@ header {
     font-weight: 300;
     font-size: 1.4rem;
   }
+  &__links {
+    display: none;
+  }
+  .button {
+    display: none;
+    background-color: v.$btn-color;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-family: v.$ff-headings;
+    font-size: 1rem;
+  }
 }
-.title {
+h1 {
   color: v.$font-heading-color;
   font-weight: 300;
   font-size: 2.5rem;
@@ -34,4 +46,64 @@ header {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem 4rem;
+}
+
+@media (min-width: v.$desktop) {
+  .nav {
+    &__menu {
+      display: none;
+    }
+    .button {
+      display: block;
+    }
+  }
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    li {
+      position: relative;
+      transition: cubic-bezier(0.77, 0, 0.18, 1) 0.5s;
+    }
+
+    li::after {
+      content: '';
+      display: block;
+      width: 0;
+      position: absolute;
+      left: 50%;
+      height: 2px;
+      background: v.$btn-color;
+      transition: cubic-bezier(0.77, 0, 0.18, 1) 0.5s;
+    }
+
+    li:hover::after {
+      width: 80%;
+      left: 10%;
+    }
+
+    a {
+      text-decoration: none;
+      color: v.$font-body-color;
+      font-size: 1rem;
+      text-transform: capitalize;
+      font-family: v.$ff-body;
+      transition: 0.5s ease-in-out color;
+      &:hover {
+        color: v.$font-heading-color;
+      }
+    }
+  }
+  h1 {
+    font-size: 4rem;
+    width: 50rem;
+    margin-top: 3rem;
+  }
+  .paragraph {
+    width: 40rem;
+  }
+  .images-container {
+    margin-top: 2rem;
+    align-items: center;
+  }
 }

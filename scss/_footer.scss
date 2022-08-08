@@ -24,3 +24,14 @@
 .footer-icon {
   width: 1.5rem;
 }
+@media (min-width: v.$desktop) {
+  .footer {
+    .footer-icon {
+      width: 2rem;
+      color: #000;
+    }
+    .logo {
+      font-size: 2rem;
+    }
+  }
+}
